@@ -2,72 +2,92 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>CampusConnect</title>
+    <title>{% block title %}CampusConnect{% endblock %}</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f2f5;
+            background: linear-gradient(135deg, #ffe1ec, #fff);
             margin: 0;
             padding: 0;
+            color: #333;
         }
 
         header {
-            background-color: #4CAF50;
+            background-color: #ff4f81;
             color: white;
-            padding: 15px;
+            padding: 20px 0;
             text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
 
-        main {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 80vh;
+        .container {
+            max-width: 500px;
+            margin: 50px auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
 
-        form {
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            width: 300px;
+        label {
+            font-weight: bold;
+            color: #555;
         }
 
-        input, button {
+        input {
             width: 100%;
             padding: 10px;
-            margin: 5px 0 15px 0;
-            border-radius: 4px;
-            border: 1px solid #ccc;
+            margin: 8px 0 15px 0;
+            border: 1px solid #f7b2c9;
+            border-radius: 6px;
+            background: #fffafc;
         }
 
         button {
-            background-color: #4CAF50;
+            width: 100%;
+            padding: 10px;
+            background-color: #ff4f81;
             color: white;
             border: none;
+            border-radius: 6px;
             cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
         }
 
         button:hover {
-            background-color: #45a049;
+            background-color: #ff2f6e;
         }
 
-        a {
-            color: #4CAF50;
+        .logout-link {
+            display: inline-block;
+            margin-top: 20px;
             text-decoration: none;
+            color: white;
+            background: #ff4f81;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: bold;
         }
 
-        a:hover {
-            text-decoration: underline;
+        .logout-link:hover {
+            background: #ff2f6e;
+        }
+
+        .welcome-box {
+            text-align: center;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>CampusConnect</h1>
+        CampusConnect
     </header>
-    <main>
+
+    <div class="container">
         {% block content %}{% endblock %}
-    </main>
+    </div>
 </body>
 </html>

@@ -1,7 +1,36 @@
 {% extends "core/base.html" %}
 
+{% block title %}Dashboard - CampusConnect{% endblock %}
+
 {% block content %}
-<h2>Dashboard</h2>
-<p>Welcome, {{ request.user.username }}!</p>
-<p><a href="{% url 'logout' %}">Logout</a></p>
+<div class="welcome-box">
+    <h2 style="color:#ff4f81; font-size:28px; margin-bottom:15px;">
+        Welcome, {{ user.username }}! 🌸
+    </h2>
+    <p style="color:#555; font-size:16px; margin-bottom:25px;">
+        You are now logged in to CampusConnect.
+    </p>
+    <a class="logout-link" href="{% url 'logout' %}">Logout</a>
+</div>
+
+<!-- Placeholder sections for future features -->
+<div class="container" style="margin-top:30px;">
+    <!-- Announcements -->
+    <div style="background:#ffe1ec; padding:15px; border-radius:10px; margin-bottom:20px;">
+        <h3 style="color:#ff4f81;">Announcements (Coming Soon)</h3>
+        <p style="color:#555;">Students will see course updates and campus news here.</p>
+    </div>
+
+    <!-- Study Groups / Tasks -->
+    <div style="background:#ffe1ec; padding:15px; border-radius:10px; margin-bottom:20px;">
+        <h3 style="color:#ff4f81;">Study Groups (Coming Soon)</h3>
+        <p style="color:#555;">Students will be able to join or create study groups for collaboration.</p>
+    </div>
+
+    <!-- Events / Calendar -->
+    <div style="background:#ffe1ec; padding:15px; border-radius:10px;">
+        <h3 style="color:#ff4f81;">Events / Calendar (Coming Soon)</h3>
+        <p style="color:#555;">Upcoming campus events will be displayed here for students.</p>
+    </div>
+</div>
 {% endblock %}
