@@ -93,3 +93,11 @@ STATIC_URL = 'static/'
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+# Redirect to your custom login page when login is required
+LOGIN_URL = '/login/'
+
+# Redirect here after successful login
+LOGIN_REDIRECT_URL = '/dashboard/'
+
+# Redirect here after logout
+LOGOUT_REDIRECT_URL = '/login/'
