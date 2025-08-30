@@ -13,7 +13,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 SECRET_KEY = 'django-insecure-q_&qfm+2mj6&r)kb-ip5wmqg43j*g6an4+&9p6&nw++w89@+!g'
 DEBUG = True
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'campusconnect-3fps.onrender.com']
+
 
 
 INSTALLED_APPS = [
